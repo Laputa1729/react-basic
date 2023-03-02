@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>jsx语法规则</title>
+    <style>
+      .title {
+        width: 200px;
+        background-color: orange;
+      }
+    </style>
+</head>
+
+<body>
+<div id="test"></div>
+
+<script type="text/javascript" src="../js/react.development.js"></script>
+<script type="text/javascript" src="../js/react-dom.development.js"></script>
+<script type="text/javascript" src="../js/babel.min.js"></script>
+
+<script type="text/babel">
+    const myId = 'laputa';
+    const myData = 'Hello, React.';
+
+    const VDOM = (
+        <div>
+            <h2 className='title' id={ myId }>
+                <span style={ { color: '#fff', fontSize: '30px' } }>
+                    { myData.toLowerCase() }
+                </span>
+            </h2>
+            <input type="text"/>
+            <Good></Good>
+        </div>
+    );
+
+    ReactDOM.render(VDOM, document.getElementById('test'));
+
+    /*
+        jsx语法规则：
+            1.定义虚拟DOM时，不要写引号。
+            2.标签中混入JS【表达式】时要用{}。
+            3.类名指定要用className。为了避开ES6的class关键字。
+            4.内联样式，要用style={{key: value}}的形式。
+            5.虚拟DOM只有一个根标签。
+            6.标签必须闭合。
+            7.标签首字母大写，会被识别为组件。
+    */
+
+    /*
+        什么是表达式？什么是语句？
+            1.表达式（有值）：
+                (1). a
+                (2). a + b
+                (3). demo(1)
+                (4). arr.map()
+                (5). function test() {}  // 就算没有返回值，不就返回undefined
+            2.语句
+                (1). if () {}
+                (2). for () {}
+                (3). switch () { case: xxx }
+     */
+</script>
+</body>
+</html>
