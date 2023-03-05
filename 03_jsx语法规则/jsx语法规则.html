@@ -21,6 +21,17 @@
 <script type="text/javascript" src="../js/babel.min.js"></script>
 
 <script type="text/babel">
+    /*
+        jsx语法规则：
+            1.定义虚拟DOM时，不要写引号。
+            2.标签中混入JS【表达式】时要用{}。
+            3.类名指定要用className。为了避开ES6的class关键字。
+            4.内联样式，要用style={ {key: value} }的形式。
+            5.虚拟DOM只有一个根标签。
+            6.标签必须闭合。
+            7.标签首字母大写，会被识别为组件。
+    */
+
     const myId = 'laputa';
     const myData = 'Hello, React.';
 
@@ -39,17 +50,6 @@
     ReactDOM.render(VDOM, document.getElementById('test'));
 
     /*
-        jsx语法规则：
-            1.定义虚拟DOM时，不要写引号。
-            2.标签中混入JS【表达式】时要用{}。
-            3.类名指定要用className。为了避开ES6的class关键字。
-            4.内联样式，要用style={{key: value}}的形式。
-            5.虚拟DOM只有一个根标签。
-            6.标签必须闭合。
-            7.标签首字母大写，会被识别为组件。
-    */
-
-    /*
         什么是表达式？什么是语句？
             1.表达式（有值）：
                 (1). a
@@ -62,6 +62,7 @@
                 (2). for () {}
                 (3). switch () { case: xxx }
      */
+
 </script>
 </body>
 </html>
