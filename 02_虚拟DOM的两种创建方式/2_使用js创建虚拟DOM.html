@@ -10,25 +10,21 @@
     <div id="test"></div>
     
     <!-- 引入核心库 -->
-    <script
-        type="text/javascript"
-        src="../js/react.development.js"
-    ></script>
-    <script
-        type="text/javascript"
-        src="../js/react-dom.development.js"
-    ></script>
+    <script type="text/javascript" src="../js/react.development.js"></script>
+    <script type="text/javascript" src="../js/react-dom.development.js"></script>
     
     <!-- 不用babel -->
     <script type="text/javascript">
       // 1.创建虚拟DOM
       const VDOM = React.createElement(
         'h1',
-        {id: 'title', className: 'fff'},
+        { id: 'title', className: 'fff' },
         'Hello, React.'
       ); /* 这种方式创建DOM，不能嵌套标签 */
+      
       // 2.渲染虚拟DOM到页面，React没有提供选择器
       ReactDOM.render(VDOM, document.getElementById('test'));
+      
     </script>
   </body>
 </html>
