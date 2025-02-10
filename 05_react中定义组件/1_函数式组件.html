@@ -19,7 +19,7 @@
       // 1.创建函数式组件
       function MyComponent() {
 
-        console.log(this);  // 此处的 this 是 undefined 。因为 babel 编译后，开启了严格模式。
+        console.log('this ==>', this);  // 此处的 this 是 undefined 。因为 babel 编译后，开启了严格模式。
 
         return <h2>行吧</h2>;
       }
